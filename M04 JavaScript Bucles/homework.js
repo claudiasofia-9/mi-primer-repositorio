@@ -5,7 +5,16 @@ function obtenerMayor(x, y) {
    // Retornar el número más grande.
    // Si son iguales, retornar cualquiera de los dos.
    // Tu código:
-}
+   if (typeof x === 'number' && typeof y === 'number') {
+      if (x > y) {
+         return x
+      } if (y < x) {
+         return y
+      } if (x === y) {
+         return x
+      }
+   }
+   }
 
 function mayoriaDeEdad(edad) {
    // Determinar si la persona puede ingresar al evento según su edad.
@@ -108,6 +117,12 @@ function doWhile(num) {
    // Retornar el valor final.
    // Utilizar el bucle Do-While.
    // Tu código:
+   var counter = 0;
+   do{
+      numero += 5;
+      counter++
+   } while (counter < 8);
+   return numero;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/

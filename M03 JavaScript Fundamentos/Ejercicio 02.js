@@ -4,6 +4,8 @@
 function devolverString(string) {
    // Debe retornar un string.
    // Tu código:
+
+   return string
 }
 
 // ⛔️ "X" e "Y" son números.
@@ -35,7 +37,8 @@ function multiplica(x, y) {
 function obtenerResto(x, y) {
    // Obten el resto de la división de "x" entre "y".
    // Tu código:
-   x % y;
+   // x % y;
+   return x % y
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/

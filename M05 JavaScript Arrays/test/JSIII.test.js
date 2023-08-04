@@ -202,10 +202,13 @@ describe('JAVASCRIPT III', function () {
          'Mayo',
          'Febrero',
       ];
+
       var notOk = ['Marzo', 'Diciembre', 'Julio', 'Noviembre'];
+
       it('Debe retornar un arreglo con los meses requeridos', function () {
          expect(mesesDelAño(ok)).toEqual(['Marzo', 'Noviembre', 'Enero']);
       });
+
       it('Debe retornar el mensaje si alguno de los meses no se encuentra en el arreglo', function () {
          expect(mesesDelAño(notOk)).toEqual(
             'No se encontraron los meses pedidos'

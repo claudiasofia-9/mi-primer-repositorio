@@ -157,7 +157,8 @@ function diaDeLaSemana(numeroDeDia) {
    // Realiza una función que, dado el número del día de la semana, retorne: "Es fin de semana"
    // si el día corresponde a "Sábado" o "Domingo", y "Es dia laboral" en caso contrario.
    // Tu código:
-   if (numeroDdeDia === 1 || numeroDeDia === 7) {
+
+   if (numeroDeDia === 1 || numeroDeDia === 7) {
       return "Es fin de semana";
    } else {
       return "Es dia laboral";
@@ -168,12 +169,16 @@ function empiezaConNueve(num) {
    // Esta función recibe por parámetro un número.
    // Debe retornar true si el entero inicia con 9 y false en otro caso.
    // Tu código:
+
    var str = num.toString();
-   if (str[0] === '9') {
-      return true;
-   } else {
-      return false;
-   }
+
+   // if (str[0] === '9') {
+   //    return true;
+   // } else {
+   //    return false;
+   // }
+
+   return str[0] === '9'
 }
 
 function todosIguales(array) {
@@ -185,6 +190,7 @@ function todosIguales(array) {
          return false;
       }
    }
+
    return true;
 }
 
@@ -193,15 +199,19 @@ function mesesDelAño(array) {
    // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
+
+   let nuevoArray = []
+
    for (var i = 0; i < array.length; i++) {
       if (array[i] === 'Enero' || array[i] === 'Marzo' || array[i] === 'Noviembre') {
          nuevoArray.push(array[i])
       }
    }
-   if (nuevoArray.length < 3) {
-      return 'No se encontraron los meses pedidos';
-   } else {
+
+   if (nuevoArray.length === 3) {
       return nuevoArray;
+   } else {
+      return 'No se encontraron los meses pedidos';
    }
 }
 
@@ -209,10 +219,16 @@ function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
    // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
    // Tu código:
-   var tabla = [];
+
+   var tabla = []
+
    for (i = 0; i < 11; i++) {
-      tabla.push (6*i);
+      tabla.push(6 * i)
    }
+
+   return tabla
+
+   // return [0, 6, 12, 18, 24, 30, 36, 42, 48, 54, 60]
 }
 
 function mayorACien(array) {
@@ -221,10 +237,13 @@ function mayorACien(array) {
    // Tu código:
    var numeroArray = [];
 
-   for(var i = 0; i < array.length; i++) {
+   for (var i = 0; i < array.length; i++) {
       if (array[i] > 100) {
-         nuevoArray.push(array[i])}
+         numeroArray.push(array[i])
       }
+   }
+
+   return numeroArray
 }
 
 /* ----------------------------------------------------------------------------------
@@ -247,6 +266,7 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
+}
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {
@@ -271,5 +291,4 @@ module.exports = {
    mayorACien,
    breakStatement,
    continueStatement,
-}
 }
